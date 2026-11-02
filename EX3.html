@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang='fr'>
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>Inscription</title>
+    <link rel='stylesheet' href='main.css'>
+</head>
+<body>
+    <form action="inscri.php" method="post">
+        <fieldset>
+            <legend>Inscription</legend>
+            <label for="c">CIN :</label>
+            <input type="text" name="c" id="c">
+            <br><br>
+            <label for="np">Nom & Prénom :</label>
+            <input type="text" name="np" id="np">
+            <br><br>
+            <label for="d">Date & L'heure de naisssance :</label>
+            <input type="datetime" name="d" id="d">
+            <br><br>
+            <label for="di">Date d'inscription :</label>
+            <input type="number" name="di" id="di">
+            <br><br>
+            <label for="s1">Parcours à suivre :</label>
+            <select name="s1" id="s1">
+                <option value="">TC</option>
+                <option value="">SEM</option>
+                <option value="">DSI</option>
+                <option value="">RSI</option>
+            </select>
+            <br><br>
+            <label for="s2">Niveau de Parcours à suivre :</label>
+            <select name="s2" id="s2">
+                <option value="">1ère Année</option>
+                <option value="">2ème Année</option>
+                <option value="">3ème Année</option>
+            </select>
+        </fieldset>
+    </form>
+</body>
+</html>

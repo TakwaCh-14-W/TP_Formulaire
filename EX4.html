@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang='fr'>
+
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>Page Title</title>
+    <style>
+        fieldset {
+            border: 2px solid black;
+            margin: 10px;
+            padding: 5px;
+            width: 310px;
+        }
+
+        #field {
+            width: 250px;
+        }
+
+        #fieldnum {
+            width: 200px;
+        }
+
+        input,
+        textarea {
+            margin: 2px;
+        }
+
+        th {
+            display: flex;
+            justify-content: left;
+            align-items: center;
+        }
+
+        td[colspan="2"],
+        legend {
+            font-weight: bolder;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Sans Tableau : -->
+    <form action="inscri.php" method="post">
+        <fieldset>
+            <legend>Votre identité</legend>
+            <ol>
+                <li>
+                    <label for="n">Nom</label>
+                    <input type="text" name="n" id="n" placeholder="Prénom et nom">
+                </li>
+                <li>
+                    <label for="e">Email</label>
+                    <input type="email" name="e" id="e" placeholder="exemple@domaine.com">
+                </li>
+                <li>
+                    <label for="t">Téléphone</label>
+                    <input type="tel" name="t" id="t" placeholder="par ex : +3375500000000">
+                </li>
+            </ol>
+        </fieldset>
+        <fieldset>
+            <legend>Adresse de livraison</legend>
+            <ol>
+                <li>
+                    <label for="area">Adresse</label>
+                    <textarea name="area" id="area"></textarea>
+                </li>
+                <li>
+                    <label for="c">Code postal</label>
+                    <input type="text" name="c" id="c">
+                </li>
+                <li>
+                    <label for="p">Pays</label>
+                    <input type="text" name="p" id="p">
+                </li>
+            </ol>
+        </fieldset>
+        <fieldset>
+            <legend>information CB</legend>
+            <ol>
+                <li>
+                    <fieldset id="fieldnum">
+                        <legend>Type de carte bancaire</legend>
+                        <ol>
+                            <li>
+                                <input type="radio" name="r" id="r1">VISA
+                            </li>
+                            <li>
+                                <input type="radio" name="r" id="r2">AmEx
+
+                            </li>
+                            <li>
+                                <input type="radio" name="r" id="r3">Mastercard
+                            </li>
+                        </ol>
+                    </fieldset>
+                </li>
+                <li>
+                    <label for="nm">N° de carte</label>
+                    <input type="text" name="nm" id="nm">
+                </li>
+                <li>
+                    <label for="cs">Code sécurité</label>
+                    <input type="password" name="cs" id="cs">
+                </li>
+                <li>
+                    <label for="np">Nom du porteur</label>
+                    <input type="text" name="np" id="np" placeholder="Même nom que sur la carte">
+                </li>
+            </ol>
+        </fieldset>
+        <fieldset>
+            <button type="submit">J'achète !</button>
+        </fieldset>
+    </form>
+    <br><br><br><br><br>
+    <!-- Avec Tableau -->
+    <form action="inscri.php" method="post">
+        <fieldset>
+            <legend>Votre identité</legend>
+            <table>
+                <tr>
+                    <th>
+                        <label for="n">Nom</label>
+                    </th>
+                    <td>
+                        <input type="text" name="n" id="n" placeholder="Prénom et nom">
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        <label for="e">Email</label>
+                    </th>
+                    <td>
+                        <input type="email" name="e" id="e" placeholder="exemple@domaine.com">
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        <label for="t">Téléphone</label>
+                    </th>
+                    <td>
+                        <input type="tel" name="t" id="t" placeholder="par ex : +3375500000000">
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+        <fieldset>
+            <legend>Adresse de livraison</legend>
+            <table>
+                <tr>
+                    <th>
+                        <label for="area">Adresse</label>
+                    </th>
+                    <td>
+                        <textarea name="area" id="area"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        <label for="c">Code postal</label>
+                    </th>
+                    <td>
+                        <input type="text" name="c" id="c">
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        <label for="p">Pays</label>
+                    </th>
+                    <td>
+                        <input type="text" name="p" id="p">
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+        <fieldset>
+            <legend>information CB</legend>
+            <table>
+                <tr>
+                    <td colspan="2">
+                        <fieldset id="field">
+                            <legend>Type de carte bancaire</legend>
+                            <table>
+                                <tr>
+                                    <td>
+                                        <input type="radio" name="r" id="r1">VISA
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="r" id="r2">AmEx
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="r" id="r3">Mastercard
+                                    </td>
+                                </tr>
+                            </table>
+                        </fieldset>
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        <label for="nm">N° de carte</label>
+                    </th>
+                    <td>
+                        <input type="text" name="nm" id="nm">
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        <label for="cs">Code sécurité</label>
+                    </th>
+                    <td>
+                        <input type="password" name="cs" id="cs">
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        <label for="np">Nom du porteur</label>
+                    </th>
+                    <td>
+                        <input type="text" name="np" id="np" placeholder="Même nom que sur la carte">
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+        <fieldset>
+            <button type="submit">J'achète !</button>
+        </fieldset>
+    </form>
+</body>
+
+</html>

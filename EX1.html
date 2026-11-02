@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang='fr'>
+
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>Page Title</title>
+    <link rel='stylesheet' href='main.css'>
+</head>
+
+<body>
+    <!-- question1+2 -->
+    <form action="traitement.php" method="post">
+        <label for="p">Votre pseudo: </label>
+        <input type="text" name="p" id="p">
+        <br><br><br>
+        <label for="m">Votre mot de passe: </label>
+        <input type="text" name="m" id="m">
+        <br><br><br>
+        <label for="r">Vos raisons de vous inscrire sur ce site?</label>
+        <br>
+        <textarea name="r" id="r" cols="22" rows="3"></textarea>
+        <br><br>
+        <button type="submit">S'inscrire</button>
+        <button type="reset">Annuler</button>
+    </form>
+    <!-- question1+3 --> <br><br><br><br>
+    <form action="traitement.php" method="post">
+        <table>
+            <tr>
+                <td>
+                    <label for="p">Votre pseudo: </label>
+                </td>
+                <td>
+                    <input type="text" name="p" id="p">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="m">Votre mot de passe: </label>
+                </td>
+                <td>
+                    <input type="text" name="m" id="m">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="r">Vos raisons de vous inscrire sur ce site?</label>
+                </td>
+                <td>
+                    <textarea name="r" id="r" cols="22"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <button type="submit">S'inscrire</button>
+                    <button type="reset">Annuler</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>

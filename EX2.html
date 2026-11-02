@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang='fr'>
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>Page Title</title>
+    <style>
+        body{
+            background-color: rgba(131, 210, 211, 0.396);
+        }
+        .disp {
+            display: flex;
+            justify-content: end;
+            align-items:flex-start ;
+        }
+    </style>
+</head>
+<body>
+    <form action="fichier.php" method="post">
+        <table>
+            <tr>
+                <td class="disp"><label for="p">Votre pseudo :</label></td>
+                <td><input type="text" name="p" id="p"></td>
+            </tr>
+            <tr>
+                <td class="disp"><label for="m">Votre mot de passe :</label></td>
+                <td><input type="password" name="m" id="m"></td>
+            </tr>
+            <tr>
+                <td class="disp"><label for="rm">Ressaisir votre mot de passe :</label></td>
+                <td><input type="password" name="rm" id="rm"></td>
+            </tr>
+            <tr>
+                <td class="disp"><label for="rr">OS préféré :</label></td>
+                <td>
+                    <input type="radio" name="r" id="r1"><span>Windows XP</span>
+                    <br>
+                    <input type="radio" name="r" id="r2" checked><span>Windows Vista</span>
+                    <br>
+                    <input type="radio" name="r" id="r3"><span>MacOS X</span>
+                    <br>
+                    <input type="radio" name="r" id="r4"><span>Linux</span>
+                    <br>
+                    <input type="radio" name="r" id="r5"><span>Autre</span>
+                </td>
+            </tr>
+            <tr>
+                <td class="disp"><label for="ch">Vous possédez :</label></td>
+                <td>
+                    <input type="checkbox" name="ch1" id="ch1"><span>Un ordinateur de bureau</span>
+                    <br>
+                    <input type="checkbox" name="ch2" id="ch2"><span>Un portable</span>
+                    <br>
+                    <input type="checkbox" name="ch3" id="ch3"><span>Un netbook</span>
+                    <br>
+                    <input type="checkbox" name="ch4" id="ch4"><span>Une tablette (Pad)</span>
+                </td>
+            </tr>
+            <tr>
+                <td class="disp"><label for="s">Votre profession :</label></td>
+                <td>
+                    <select name="s" id="s" size="5">
+                        <option value="Chômeur">Chômeur</option>
+                        <option value="Etudiant">Etudiant</option>
+                        <option value="Fonctionnaire">Fonctionnaire</option>
+                        <option value="Privé">Privé</option>
+                        <option value="Retraité">Retraité</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><button type="submit">S'inscrire</button></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
